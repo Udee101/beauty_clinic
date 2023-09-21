@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets';
+import logoImg from '../assets/Logo.svg'
+const navLinks = [
+  {
+    link_name: "Home",
+    url: "#home"
+  },
+  {
+    link_name: "About",
+    url: "#about"
+  },
+  {
+    link_name: "Services",
+    url: "#services"
+  },
+  {
+    link_name: "Contact",
+    url: "#contact"
+  },
+]
+---
+
+<div class="w-full max-w-[1440px] mx-auto p-4">
+  <nav class="flex justify-between items-center">
+    <div>
+      <Image src={logoImg} alt="Logo image" />
+    </div>
+    
+    <ul class="hidden w-[35%] md:flex md:justify-between">
+      { navLinks.map((data) => 
+        <li class="duration-200 text-gray-600 hover:text-black">
+          <a href={data.url}>{data.link_name}</a>
+          </li>
+      )}
+    </ul>
+    
+    <div>
+      <button class="border-2 py-1 px-2 border-[#E9D415] duration-200 hover:bg-[#E9D415] hover:text-white">Book Appointment</button>
+    </div>
+  </nav>
+</div>

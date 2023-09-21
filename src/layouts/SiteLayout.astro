@@ -1,0 +1,26 @@
+---
+import Navbar from "../components/Navbar.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap" rel="stylesheet">
+		<title>Beauty Clinic</title>
+	</head>
+	<body>
+		<div id="app" class="p-4">
+			<header class="fixed w-full left-0 top-0 outline">
+				<Navbar />
+			</header>
+			
+			<main class="mt-16">
+				<slot />
+			</main>
+		</div>
+	</body>
+</html>
