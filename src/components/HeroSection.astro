@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import heroImg from "../assets/heroImg.jpg"
+import stars from "../assets/elements1.svg"
+import ellipse from "../assets/elements2.svg"
+---
+
+<section id="home" class="py-16 w-full relative">
+  <div class="absolute w-80 h-80 rounded-full bg-blur-yellow blur-xl left-0 top-0 md:left-[50%]"></div>
+  <div class="max-w-custom mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3">
+      <div class="order-1 md:-order-1 col-span-2 ">
+        <div class="space-y-4 mt-10 md:space-y-6 relative">
+          <h1 class="font-[Judson] text-primary-brown text-3xl md:text-5xl lg:text-7xl">Exclusive beauty clinic for you who are special.</h1>
+          <p class="max-w-md text-secondary-grey">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere omnis nesciunt debitis nostrum dolorum delectus itaque.</p>
+
+          <div class="inline-grid grid-cols-2 space-x-2">
+            <button class="text-secondary-grey border-2 p-2 rounded-3xl border-primary-yellow duration-200 hover:bg-primary-yellow hover:text-white">Book Appointment</button>
+            <a href="#services" class="text-white p-2 border-2 border-prtext-primary-brown rounded-3xl bg-primary-brown hover:border-primary-brown duration-200 hover:bg-transparent hover:text-primary-brown text-center">Services</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <Image src={stars} alt="stars svg" class="w-28 absolute top-[60%] left-0 md:top-[45%] md:-left-16 md:w-32" />
+        <Image src={ellipse} alt="ellipse svg" class="w-44 hidden absolute -bottom-20 -left-20 md:block md:w-48" />
+        <div class="md:mt-10 rounded-tr-[200px] rounded-tl-[200px] w-[80%] mx-auto md:w-[90%]">
+          <Image src={heroImg} alt="Hero image" class="mix-blend-darken" />
+        </div>
+      </div>
+    </div> 
+  </div>
+</section>
