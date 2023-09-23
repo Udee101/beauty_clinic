@@ -1,0 +1,24 @@
+---
+import SectionIntro from "./SectionIntro.astro";
+import SectionTitle from "./SectionTitle.astro";
+import ServiceCard from "./ServiceCard.astro";
+import { services } from "../data/services.js"
+---
+
+<section id="services" class="py-20 w-full">
+	<div class="max-w-custom mx-auto">
+		<div data-set="section title" class="relative mb-10 w-full text-center">
+			<SectionTitle title="SERVICES" />
+		</div>
+		<center>
+			<SectionIntro
+				text="We always provide the best service for you."
+				extraClass="max-w-sm"
+			/>
+		</center>
+
+		<div class="grid gap-8 py-16 md:grid-cols-3">
+			{services.map((el) => <ServiceCard data={el} />)}
+		</div>
+	</div>
+</section>

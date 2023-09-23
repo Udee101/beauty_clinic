@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+	data: {
+		title: string;
+		img: ImageMetadata;
+	}
+}
+const { data } = Astro.props;
+---
+
+<div class="relative w-full">
+	<Image
+		src={data.img}
+		alt="massage service image"
+		class="w-[90%] mx-auto md:w-full"
+	/>
+	<div class="absolute inset-0 flex place-items-center justify-center">
+		<div class="w-[70%] h-28 bg-primary-grey-200 rounded-md flex items-center">
+			<p class="max-w-[55%] mx-auto text-center text-sm md:text-base">
+				{data.title}
+			</p>
+		</div>
+	</div>
+</div>

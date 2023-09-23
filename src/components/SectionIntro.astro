@@ -1,0 +1,12 @@
+---
+interface Props {
+	text: string;
+	extraClass?: string;
+}
+
+const { text, extraClass } = Astro.props;
+---
+
+<h2 class=`font-[Judson] text-primary-brown text-2xl md:text-3xl ${extraClass}`>
+	{text}
+</h2>
