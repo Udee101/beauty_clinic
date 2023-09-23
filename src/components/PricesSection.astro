@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import SectionTitle from "./SectionTitle.astro";
+import priceSec1 from "../assets/priceSec1.jpg";
+import priceSec2 from "../assets/priceSec2.jpg";
+import SectionIntro from "./SectionIntro.astro";
+import { priceList } from "../data/priceList.js";
+import PriceTable from "./PriceTable.astro";
+---
+
+<section id="prices" class="py-20 w-full">
+	<div class="max-w-custom mx-auto">
+		<div class="grid md:grid-cols-2">
+			<div class="grid gap-8 lg:gap-0">
+				<div
+					data-set="section title"
+					class="relative w-full text-center md:text-left"
+				>
+					<SectionTitle title="PRICE RANGE" />
+				</div>
+
+				<SectionIntro
+					text="Service fees for your beauty and body care"
+					extraClass="text-center max-w-md md:text-left"
+				/>
+
+				<div data-set="price table">
+					<div class="inline-grid grid-cols-2 w-full font-light">
+						<p>TREATMENTS</p>
+						<p class="place-self-end">PRICES</p>
+					</div>
+
+          <div class="grid gap-y-6 mt-6">
+						{priceList.map((el) => <PriceTable data={el} />)}
+          </div>
+				</div>
+			</div>
+
+			<div
+				data-set="price section images"
+				class="hidden gap-2 w-full justify-evenly md:justify-end md:flex"
+			>
+				<Image
+					src={priceSec1}
+					alt="beauty products"
+					class="rounded-[150px] w-[35%] self-end mix-blend-darken md:w-[30%]"
+				/>
+				<Image
+					src={priceSec2}
+					alt="Image of a woman doing facials"
+					class="rounded-[150px] w-[55%] mix-blend-darken md:w-[50%]"
+				/>
+			</div>
+		</div>
+	</div>
+</section>
