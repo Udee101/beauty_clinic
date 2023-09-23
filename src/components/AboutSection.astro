@@ -4,6 +4,7 @@ import aboutImg1 from "../assets/aboutImg1.jpg";
 import aboutImg2 from "../assets/aboutImg2.jpg";
 import SectionTitle from "./SectionTitle.astro";
 import Button from "./Button.astro";
+import SectionIntro from "./SectionIntro.astro";
 ---
 
 <section id="about" class="py-20 w-full">
@@ -36,17 +37,17 @@ import Button from "./Button.astro";
 				<div class="relative hidden md:block">
 					<SectionTitle title="ABOUT" />
 				</div>
-				<h2 class="font-[Judson] text-primary-brown text-2xl md:text-4xl">
-					We provide special care for your appearance and beauty.
-				</h2>
-				<p class="max-w-md text-secondary-grey">
+				<SectionIntro
+					text="We provide special care for your appearance and beauty."
+				/>
+				<article class="max-w-lg text-secondary-grey">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste alias
 					dolore commodi placeat unde tempore, ad est eligendi? Nobis, veniam
 					magnam? Voluptatibus, deleniti tenetur. Nihil, saepe! Quasi nemo unde
 					excepturi. <br /><br /> Lorem ipsum dolor sit amet consectetur
 					adipisicing elit. Omnis esse blanditiis maxime qui sit nostrum nihil
 					architecto sed alias veritatis
-				</p>
+				</article>
 				<div>
 					<Button
 						btnClass="text-white py-2 px-6 border-2 border-primary-brown rounded-3xl bg-primary-brown duration-200 hover:bg-transparent hover:text-primary-brown text-center"
