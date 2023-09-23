@@ -1,0 +1,16 @@
+---
+interface Props {
+  label?: string;
+	btnClass: string;
+}
+
+const { label, btnClass } = Astro.props;
+---
+
+<button
+	type="button"
+	class={ btnClass }
+>
+  { label }
+  <slot />
+</button>
