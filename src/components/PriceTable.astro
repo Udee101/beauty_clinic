@@ -1,0 +1,18 @@
+---
+interface Props {
+	data: {
+		treatment: string;
+		price: string;
+	};
+}
+
+const { data } = Astro.props;
+---
+
+<div
+	class="inline-grid grid-cols-4 w-full items-center font-light text-sm"
+>
+	<p class="col-span-2">{data.treatment}</p>
+	<div class="place-self-center w-full h-[1.5px] bg-primary-grey-200"></div>
+	<p class="place-self-end">&dollar;{data.price}</p>
+</div>
