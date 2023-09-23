@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import SectionIntro from "./SectionIntro.astro";
+import SectionTitle from "./SectionTitle.astro";
+import team1 from "../assets/team1.jpg";
+import fb from "../assets/fb.svg";
+import ig from "../assets/ig.svg";
+import twitter from "../assets/twitter.svg";
+import { team } from "../data/team.js";
+import TeamMemberCard from "./TeamMemberCard.astro";
+
+const mediaImgs = [fb, twitter, ig];
+---
+
+<section id="team" class="py-20 w-full relative">
+	<div
+		class="absolute inset-16 rounded-full bg-blur-yellow blur-[10rem] right-[5rem] top-0 md:right-[50%] overflow-hidden"
+	>
+	</div>
+	<div class="max-w-custom mx-auto">
+		<div data-set="section title" class="relative mb-10 w-full text-center">
+			<SectionTitle title="TEAM" />
+		</div>
+		<center class="space-y-4 relative z-[1]">
+			<SectionIntro text="Supported by experts" />
+			<p class="text-secondary-grey max-w-lg">
+				At risus viverra adipiscing at in tellus integer feugiat scelerisque
+				pharetra diam sit.
+			</p>
+		</center>
+
+		<div class="grid gap-y-8 pt-12 md:grid-cols-3 md:gap-x-8">
+			{team.map((el) => <TeamMemberCard data={el} />)}
+		</div>
+	</div>
+</section>

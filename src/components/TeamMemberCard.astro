@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import fb from "../assets/fb.svg";
+import ig from "../assets/ig.svg";
+import twitter from "../assets/twitter.svg";
+
+interface Props {
+	data: {
+		name: string;
+		img: ImageMetadata;
+		role: string;
+		socials: string[];
+	};
+}
+const { data } = Astro.props;
+const socialIcons = [fb, twitter, ig];
+---
+
+<div
+	class="pt-4 pb-8 px-4 space-y-5 mx-auto rounded-t-full relative z-[1] duration-300 hover:scale-105 hover:shadow-md"
+>
+	<Image src={data.img} alt="" class="rounded-full mix-blend-darken" />
+	<div class="font-light text-center relative z-[1]">
+		<p>{data.name}</p>
+		<p class="text-sm">{data.role}</p>
+		<div class="flex gap-2 place-content-center mt-2">
+			{
+				socialIcons.map((el, i) => (
+					<a href={data.socials[i]} target="_blank">
+						<Image src={el} alt="social media icons" />
+					</a>
+				))
+			}
+		</div>
+	</div>
+</div>
