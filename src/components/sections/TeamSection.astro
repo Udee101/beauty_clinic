@@ -1,15 +1,9 @@
 ---
-import { Image } from "astro:assets";
-import SectionIntro from "./SectionIntro.astro";
-import SectionTitle from "./SectionTitle.astro";
-import team1 from "../assets/team1.jpg";
-import fb from "../assets/fb.svg";
-import ig from "../assets/ig.svg";
-import twitter from "../assets/twitter.svg";
-import { team } from "../data/team.js";
-import TeamMemberCard from "./TeamMemberCard.astro";
+import SectionIntro from "../SectionIntro.astro";
+import SectionTitle from "../SectionTitle.astro";
+import { team } from "../../data/team.js";
+import TeamMemberCard from "../TeamMemberCard.astro";
 
-const mediaImgs = [fb, twitter, ig];
 ---
 
 <section id="team" class="py-20 w-full relative">
