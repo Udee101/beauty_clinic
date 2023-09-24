@@ -3,6 +3,11 @@
 For this frontend test, I chose **Beauty Clinic** as the small industry, and built an Astro template site for it. The name of this particular imagined beauty clinic is **Beleza** <span>&mdash;</span> spanish word for `beauty`, hence the name of this website.
 
 [Here's the demo](https://beauty-clinic-beleza.vercel.app/)
+## Technologies Used
+- Astro
+- Typescript
+- TailwindCSS
+
 
 ## How to run locally
 
