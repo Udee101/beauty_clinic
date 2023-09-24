@@ -2,27 +2,10 @@
 import { Image } from 'astro:assets';
 import logoImg from '../assets/Logo.svg'
 import Button from './Button.astro';
-const navLinks = [
-  {
-    link_name: "Home",
-    url: "#home"
-  },
-  {
-    link_name: "About",
-    url: "#about"
-  },
-  {
-    link_name: "Services",
-    url: "#services"
-  },
-  {
-    link_name: "Contact",
-    url: "#contact"
-  },
-]
+import { navLinks } from '../data/navLinks';
 ---
 
-<div class="w-full max-w-[1440px] mx-auto p-4 backdrop-blur-lg">
+<div class="w-full max-w-[1440px] mx-auto p-4">
   <nav class="flex justify-between items-center">
     <div>
       <Image src={logoImg} alt="Logo image" />

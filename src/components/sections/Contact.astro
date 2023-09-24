@@ -1,0 +1,33 @@
+---
+import SectionIntro from "../SectionIntro.astro";
+import SectionTitle from "../SectionTitle.astro";
+import { socialLinks } from "../../data/socialLinks.js";
+import { Image } from "astro:assets";
+---
+
+<section id="contact" class="py-20 w-full px-4">
+	<div class="max-w-custom mx-auto relative z-[1]">
+		<div data-set="section title" class="relative mb-10 w-full text-center">
+			<SectionTitle title="BOOKINGS" />
+		</div>
+		<center class="space-y-8">
+			<SectionIntro
+				text="Feel free to reach out to us or book an appointment via our social media handles."
+				extraClass="max-w-xl"
+			/>
+			<div class="flex w-full gap-8 place-content-center">
+				{
+					socialLinks.map((el) => (
+						<a
+							href={el.url}
+							target="_blank"
+							class="hover:-translate-y-2 duration-300"
+						>
+							<Image src={el.img} alt="social icon" />
+						</a>
+					))
+				}
+			</div>
+		</center>
+	</div>
+</section>

@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import FooterSection from "../components/sections/FooterSection.astro";
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -7,22 +8,27 @@ import Navbar from "../components/Navbar.astro";
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 		<title>Beauty Clinic</title>
 	</head>
 	<body>
 		<div id="app" class="bg-primary-grey">
 			<header class="p-4">
-				<div class="fixed w-full left-0 top-0 z-[2]">
+				<div class="fixed w-full left-0 top-0 z-[2] backdrop-blur-lg shadow-sm">
 					<Navbar />
 				</div>
 			</header>
-			
+
 			<main class="mt-16">
 				<slot />
 			</main>
+
+			<FooterSection />
 		</div>
 	</body>
 </html>

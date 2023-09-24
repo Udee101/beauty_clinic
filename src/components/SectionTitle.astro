@@ -1,13 +1,14 @@
 ---
 interface Props {
 	title: string;
+	extraClass?: string;
 }
 
-const { title } = Astro.props;
+const { title, extraClass } = Astro.props;
 ---
 
 <span
 	class="after:block after:absolute after:bg-primary-yellow after:w-[85%] after:h-1 after:-bottom-1 relative inline-block"
 >
-	<span class="relative text-lg font-light">{title}</span>
+	<span class=`relative text-lg font-light ${extraClass}`>{title}</span>
 </span>
