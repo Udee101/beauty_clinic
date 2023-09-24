@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import lines from "../../assets/lines.svg";
+---
+
+<section id="testimonial" class="py-20 px-4 w-full bg-primary-yellow relative">
+    <Image src={lines} alt="" class="md:block hidden absolute inset-0" />
+	<div class="max-w-custom mx-auto">
+		<center class="relative z-[1]">
+			<div class="max-w-lg space-y-8">
+				<p class="text-2xl font-Judson">
+					“I am very happy with this beauty clinic. They really pamper their
+					customers and give everything with the best”
+				</p>
+        <p class="font-light">REINA DOE <br><span class="text-sm">Artist / Singer</span></p>
+			</div>
+		</center>
+	</div>
+</section>
